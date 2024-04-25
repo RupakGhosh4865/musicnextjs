@@ -20,7 +20,7 @@ export const MenuItem = ({
   children,
 }: {
   setActive: (item: string) => void;
-  active: string | null;
+  active: string | null; 
   item: string;
   children?: React.ReactNode;
 }) => {
@@ -38,7 +38,7 @@ export const MenuItem = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
         >
-          {active === item && (
+          {active === item && children && (
             <div className="absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2">
               <motion.div
                 transition={transition}
